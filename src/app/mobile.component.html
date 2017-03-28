@@ -1,1 +1,17 @@
-<input type="number" pattern="\d*">
+<h3>Paste your text here:</h3>
+<p>
+    <input type="text" id="pate">
+</p>
+<p>
+    <button class="btn btn-default btn-lg">Send text</button>
+</p>
+<div *ngIf="serverCode">
+    <h3>Write this code on the desktop:</h3>
+    <p class="large">
+        <code>
+      {{serverCode}}
+    </code>
+    </p>
+</div>
+
+<!--<input type="number" pattern="\d*">-->

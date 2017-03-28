@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile.component.css']
 })
 export class MobileComponent implements OnInit {
+    serverCode: String = '';
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
