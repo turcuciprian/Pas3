@@ -7,15 +7,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page.component';
+import { MobileComponent } from './mobile.component';
+import { DesktopComponent } from './desktop.component';
 const appRoutes: Routes = [
   {path: '', component: HomePageComponent},
-  {path: 'paste', component: PastePage1Component},
-  {path: 'receive', component: ReceivePage1Component},
+  {path: 'mobile', component: MobileComponent},
+  {path: 'desktop', component: DesktopComponent},
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
+    MobileComponent,
+    DesktopComponent,
   ],
   imports: [
     BrowserModule,
