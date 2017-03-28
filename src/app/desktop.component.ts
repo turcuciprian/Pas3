@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desktop.component.css']
 })
 export class DesktopComponent implements OnInit {
+  dCode: String = '';
 
   constructor() { }
 

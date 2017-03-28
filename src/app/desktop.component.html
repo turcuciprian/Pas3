@@ -1,5 +1,5 @@
-<h3>Add the secret text here:</h3>
+<h3>Add code from Mobile:</h3>
 <p>
-    <input type="text">
+    <input type="text" [(ngModel)]="dCode">
 </p>
-<button class="btn btn-lg btn-primary">Send Code</button>
+<button *ngIf="dCode" class="btn btn-lg btn-primary">Get Paste</button>
