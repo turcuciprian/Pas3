@@ -7,13 +7,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page.component';
+import { PastePage1Component } from './paste-page1.component';
+import { ReceivePage1Component } from './receive-page1.component';
 const appRoutes: Routes = [
   {path: '', component: HomePageComponent},
+  {path: 'paste', component: PastePage1Component},
+  {path: 'receive', component: ReceivePage1Component},
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
+    PastePage1Component,
+    ReceivePage1Component
   ],
   imports: [
     BrowserModule,
