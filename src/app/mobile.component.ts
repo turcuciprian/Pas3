@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-mobile',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mobile.component.css']
 })
 export class MobileComponent implements OnInit {
-    serverCode: String = '';
+    secretCode: String = '';
 
   constructor() { }
 
   ngOnInit() {
+
+  }
+  ngSendRequest(){
 
   }
 
