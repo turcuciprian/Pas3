@@ -15,7 +15,8 @@ export class MobileComponent implements OnInit {
 
   }
   ngSendRequest(){
-
+    console.log('supposed to be sending request over here....');
+    console.log('the value is:'+this.secretCode);
   }
 
 }
