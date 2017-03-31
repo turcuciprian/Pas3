@@ -1,47 +1,42 @@
+
+
 jQuery(document).ready(function() {
+    function writeUserData(xVal) {
+        database.ref('pas3/').set({
+            SecretCode: xVal,
+        });
+    }
+    function readUserData(){
+
+    }
+
+
+
+
+
     var sendCode = $("#sendCode");
     var getCode = $("#getCode");
     var codeCode = $('#codecode');
     var stringData = $("#stringData");
     var stringDataStr = '';
-    var serverurl = "http://localhost:8000/slr";
+
+    //send the text
     if (sendCode[0]) {
         sendCode.click(function() {
             if (stringData[0]) {
                 stringDataStr = stringData.val();
             }
             console.log('sending data: ' + stringDataStr);
+            writeUserData(stringDataStr);
 
-            $.ajax({
-                    method: "POST",
-                    url: serverurl,
-                    crossDomain: true,
-                    dataType: 'json',
-                    data: JSON.stringify({ "sc": stringDataStr })
-                })
-                .done(function(msg) {
-
-                    console.log("Data Saved: " + msg);
-                });
         });
     }
     //get the text
 
     if (getCode[0]) {
         getCode.click(function() {
-            $.ajax({
-                    method: "GET",
-                    crossDomain: true,
-                    url: serverurl,
-                })
-                .done(function(msg) {
-                    var jsonobj = $.parseJSON(msg);
-                    if (codeCode[0]) {
-                        codeCode.html(jsonobj[0].sc);
-                    }
+            writeUserData(stringDataStr);
 
-                    console.log("Data recieved: " + msg);
-                });
         });
 
     }

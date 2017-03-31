@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+auth.js
 
 # dependencies
 /node_modules
