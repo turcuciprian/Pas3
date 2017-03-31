@@ -9,14 +9,16 @@ import { Http } from '@angular/http';
 export class MobileComponent implements OnInit {
     secretCode: String = '';
 
-  constructor() { }
+  constructor( private http: Http) { }
 
   ngOnInit() {
 
   }
   ngSendRequest(){
+    var data = {'sc': this.secretCode};
+    this.http.post('http://localhost:8000/slr', data);
     console.log('supposed to be sending request over here....');
-    console.log('the value is:'+this.secretCode);
+    console.log('the value is:' + this.secretCode);
   }
 
 }
