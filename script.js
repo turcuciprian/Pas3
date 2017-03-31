@@ -15,7 +15,9 @@ jQuery(document).ready(function() {
             $.ajax({
                     method: "POST",
                     url: serverurl,
-                    // data: { "sc": stringDataStr }
+                    crossDomain: true,
+                    dataType: 'json',
+                    data: JSON.stringify({ "sc": stringDataStr })
                 })
                 .done(function(msg) {
 
@@ -29,8 +31,8 @@ jQuery(document).ready(function() {
         getCode.click(function() {
             $.ajax({
                     method: "GET",
+                    crossDomain: true,
                     url: serverurl,
-                    // data: { "sc": stringDataStr }
                 })
                 .done(function(msg) {
                     var jsonobj = $.parseJSON(msg);
