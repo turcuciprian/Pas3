@@ -7,7 +7,10 @@ jQuery(document).ready(function() {
         });
     }
     function readUserData(){
-
+      var starCountRef = firebase.database().ref('pas3/');
+      starCountRef.on('value', function(snapshot) {
+        codeCode.html(snapshot.val().SecretCode);
+      });
     }
 
 
@@ -35,7 +38,7 @@ jQuery(document).ready(function() {
 
     if (getCode[0]) {
         getCode.click(function() {
-            writeUserData(stringDataStr);
+            readUserData();
 
         });
 
